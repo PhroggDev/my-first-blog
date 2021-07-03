@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Phrogg's Blog</title>
+  </head>
+  <body>
+    <header>
+    <h1><a href="/">Phrogg haz blog</a></h1>
+    </header>
+    {% for post in posts %}
+      <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p> {{ post.text|linebreaksbr }}</p>
+
+      </article>
+      {% endfor %}
+    <footer>some copyright &copy;</footer>
+  </body>
+</html>
